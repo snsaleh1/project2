@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 // new code below
 const passport = require('passport');
-
+//
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('homevents', { title: 'Express', user: req.user });
+  res.render('homevents/index',{ title: 'Mashed Potatoes', user: req.user });
 });
 
  // Google OAuth login route
@@ -18,7 +18,7 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     successRedirect: '/homevents/index',
-    failureRedirect: '/'
+    failureRedirect: '/homevents/index'
   }
 ));
 

@@ -11,7 +11,7 @@ function index(req, res, next) {
   // Make the query object to use with User.find based on
   // the user has submitted the search form or now
   User.find({email: req.user.email}, function (err, profile){
-      res.render('/homevents/index', { profile })
+      res.render('homevents/index', { user: profile, title: "HoM.e Saleh Family" })
   });
 }
 
