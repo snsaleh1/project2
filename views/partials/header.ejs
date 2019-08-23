@@ -9,9 +9,19 @@
 </head>
 <body>
   <nav>
-    <img src="/images/camera.svg">
-    <a href="/events/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
-    <a href="/events" <%- title === 'All Family Events' ? 'class="active"' : '' %>>ALL FAMILY EVENTS</a>
+    <!-- <img src="/images/camera.svg"> add a new one later -->
+    <br>
+    <a href="/homevents/index" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
+    <a href="/homevents" <%- title === 'All Family Events' ? 'class="active"' : '' %>>ALL FAMILY EVENTS</a>
+    <ul>
+        <li>
+            <% if (user) { %>
+            <a href="/logout">Log Out</a>
+            <% } else { %>
+            <a href="/auth/google">Login with Google</a>
+            <% } %>
+        </li>
+        </ul>
   </nav>
   <main>
     <h1><%= title %></h1>

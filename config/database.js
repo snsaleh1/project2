@@ -1,9 +1,9 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-mongoose.connect(process.env,DATABASE_URL, { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 
 // shortcut to mongoose.connection object
-var db = mongoose.connection;
+const db = mongoose.connection;
 
 //database connection event
 db.on('connected', function () {

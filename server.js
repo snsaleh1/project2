@@ -1,19 +1,24 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('passport');
 
-//load the env vars
+//load the env config
 require('dotenv').config();
 
-var app = express();
+const app = express();
 
-// require('./config/database');
+require('./config/database');
+//configure passport
+require('./config/passport');
 
 
-var indexRouter = require('./routes/index');
-var eventsRouter = require('/routes/users');
+
+const indexRouter = require('./routes/index');
+const homeventsRouter = require('./routes/homevents');
 
 
 // view engine setup
@@ -24,10 +29,18 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(session({
+    secret: 'homevents',
+    resave: false,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/events', eventsRouter);
+app.use('/homevents', homeventsRouter);
 
 
 // catch 404 and forward to error handler
