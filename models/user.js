@@ -1,5 +1,9 @@
 const {Schema, model } = require('mongoose');
 
+const commentSchema = new Schema({
+
+});
+
 const homeventSchema = new Schema({
     who: {
         type: String
@@ -15,10 +19,10 @@ const homeventSchema = new Schema({
     },
     Why: {
         type: String
-    }
+    },
+    comment: [commentSchema]
 
-}),
-
+});
 const userSchema = new Schema({
     name: {
         type: String
@@ -27,6 +31,7 @@ const userSchema = new Schema({
         type: String,
     },
     googleID: String,
+
     age: {
         type: Number
     },
@@ -39,8 +44,9 @@ const userSchema = new Schema({
     ambitions: {
         type: String
     },  
-    homevent: [homeventSchema],
+    homevent: [homeventSchema]
     
 });
+
 
 module.exports = model('User', userSchema);

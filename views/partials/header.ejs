@@ -9,14 +9,14 @@
 </head>
 <body>
   <nav>
-    <!-- <img src="/images/camera.svg"> -->
+    <img class="home" src="https://i.imgur.com/2idW9C3.jpg">
     <br>
-    <a href="/homevents/index" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
-    <a href="/homevents" <%- title === 'All Family Events' ? 'class="active"' : '' %>>ALL FAMILY EVENTS</a>
+    <a href="/homevents/index" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
     <ul>
         <li>
             <% if (user) { %>
-            <a href="/logout">Log Out</a>
+            <a href="/homevents/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
+            <a href="/logout">LOG OUT</a>
             <% } else { %>
             <a href="/auth/google">Login with Google</a>
             <% } %>

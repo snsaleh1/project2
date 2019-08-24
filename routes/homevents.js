@@ -7,7 +7,10 @@ const homeventsCtrl = require('../controllers/homevents');
 router.get('/', function(req, res, next) {
   res.redirect('/homevents/index');
 });
+router.get('/', homeventsCtrl.index);
 
 router.get('/index', homeventsCtrl.index);
+
+
 
 module.exports = router;
