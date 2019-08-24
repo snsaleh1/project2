@@ -1,37 +1,46 @@
 const {Schema, model } = require('mongoose');
 
+const homeventSchema = new Schema({
+    who: {
+        type: String
+    },
+    what: {
+        type: String
+    },
+    when: {
+        type: Date
+    },
+    where: {
+        type: String
+    },
+    Why: {
+        type: String
+    }
+
+}),
 
 const userSchema = new Schema({
-    
-    // homevent: [homeventSchema],
-    
     name: {
-        type: String,
-        // required: true
+        type: String
     },
     email: {
         type: String,
     },
     googleID: String,
     age: {
-        type: Number,
-        // required: true
+        type: Number
     },
     birthDate: {
-        type: Date,
-        // required: true
+        type: Date
     },
     interests: {
-        type: String,
-        // required: true
-        //at least three required
+        type: String
     },
     ambitions: {
-        type: String,
-        // required: true,
-    },
-
+        type: String
+    },  
+    homevent: [homeventSchema],
     
-})
+});
 
 module.exports = model('User', userSchema);

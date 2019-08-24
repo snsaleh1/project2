@@ -2,8 +2,8 @@ const User = require('../models/user');
 
 module.exports = {
   index,
-  addFact,
-  delFact
+  addEvent,
+  delEvent
 };
 
 function index(req, res, next) {
@@ -17,14 +17,14 @@ function index(req, res, next) {
 
 
 
-function addFact(req, res, next) {
-  req.user.facts.push(req.body);
+function addEvent(req, res, next) {
+  req.user.homevents.push(req.body);
   req.user.save(function(err) {
     if(err) return next(err);
-    res.redirect('/students');
+    res.redirect('/homevents');
   });
 }
 
-function delFact(req, res, next) {
+function delEvent(req, res, next) {
 
 }
