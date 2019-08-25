@@ -1,28 +1,5 @@
 const {Schema, model } = require('mongoose');
 
-const commentSchema = new Schema({
-    content: String
-});
-
-const homeventSchema = new Schema({
-    who: {
-        type: String
-    },
-    what: {
-        type: String
-    },
-    when: {
-        type: Date
-    },
-    where: {
-        type: String
-    },
-    Why: {
-        type: String
-    },
-    comment: [commentSchema]
-
-});
 const userSchema = new Schema({
     name: {
         type: String
@@ -43,9 +20,7 @@ const userSchema = new Schema({
     },
     ambitions: {
         type: String
-    },  
-    homevent: [homeventSchema]
-    
+    },      
 });
 
 

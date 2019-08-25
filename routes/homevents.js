@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.redirect('/homevents/index');
 });
 router.get('/index', homeventsCtrl.index);
-router.get('/new', homeventsCtrl.index);
+router.get('/new', homeventsCtrl.new);
 // router.get('/:id', homeventsCtrl.show);
 // router.post('/', homeventsCtrl.create);
 
