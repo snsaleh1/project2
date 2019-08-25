@@ -1,16 +1,17 @@
 <%- include('../partials/header') %>
 <body>
+  <section class=eventsList>
     <table id="list">
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Release<br>Year</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Event<br>Type</th>
             <th></th>
           </tr>
         </thead>
-       
-          <a href="/homevents/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT!</a>
-
+      <br>
         </table>
+  </section>
 </body>
 <%- include('../partials/footer') %>

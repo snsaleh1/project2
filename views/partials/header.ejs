@@ -12,7 +12,7 @@
     <img class="home" src="https://i.imgur.com/2idW9C3.jpg">
     <br>
     <a href="/homevents/index" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
-    <ul>
+    <ul class="nav">
         <li>
             <% if (user) { %>
             <a href="/homevents/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
