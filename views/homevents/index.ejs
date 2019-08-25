@@ -1,5 +1,7 @@
 <%- include('../partials/header') %>
 <body>
+    <% if (user) { %>
+
   <section class=eventsList>
     <table id="list">
         <thead>
@@ -12,6 +14,17 @@
         </thead>
       <br>
         </table>
+  </section>      
+  <% } else { %>
+  <section>
+    <h2>House of Medici enterprises welcomes you to YOUR FAMILY EVENTS</h2>
+    <p>Here, your family will be able to plan and keep track of events that will make the fondest of memories.</p> 
+    <p>It begins with your immediate family members but don't be afraid to add your favorite cousins, aunts, uncles, or even friends.</p>
+    <br>
+    <p>-Caleb Saleh</p>
+    <br>
+    <p>Chairman and CEO, HoM.e</p>
   </section>
+  <% } %>
 </body>
 <%- include('../partials/footer') %>
