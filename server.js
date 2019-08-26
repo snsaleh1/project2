@@ -20,6 +20,7 @@ require('./config/passport');
 
 const indexRouter = require('./routes/index');
 const homeventsRouter = require('./routes/homevents');
+const searchRouter = require('./routes/yelp');
 
 
 app.use(cors());
@@ -45,6 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/homevents', homeventsRouter);
+app.use('/yelpSearch', searchRouter);
 
 
 // catch 404 and forward to error handler

@@ -10,13 +10,14 @@ const homeventSchema = new Schema({
     },
     what: {
         type: String,
-        enum: ["Breakfast", "Lunch", "Dinner", "Coffee/Drinks", "Activity", "Trip"]
+        enum: ["Breakfast", "Lunch", "Dinner", "Coffee", "Activity", "Trip"]
     },
     when: {
         type: Date
     },
     where: {
         type: String
+
     },
     Why: {
         type: String

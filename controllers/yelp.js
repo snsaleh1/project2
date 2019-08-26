@@ -8,23 +8,23 @@ module.exports = {
 
 function yelpSearch(req, res){
   console.log(req.body.where);
-    if(req.body.what === "breakfast" || req.body.what === "lunch" || req.body.what === "dinner"){
+  console.log(req.body.what);
+    if(req.body.what === "Breakfast" || req.body.what === "Lunch" || req.body.what === "Dinner"){
     client.search({
       term: 'Restaurant',
-      //model will be dropdown? I prefer input..(req.body.where({}))
-      location: (req.body.where),
+      location: req.body.where,
       limit: 5
     }).then(response => {
-      console.log(response.jsonBody.businesses);
+      console.log(response);
       let result = response.jsonBody.businesses
-      res.status(200).json(result)
+      res.status(200).json(result[0])
     }).catch(e => {
       console.log(e);
     });
-  } else if(req.body.what === "coffee"){
+  } else if(req.body.what === "Coffee/Drinks"){
     client.search({
         term: 'coffee shop',
-        location: (req.body.where),
+        location: req.body.where,
         limit: 5
       }).then(response => {
         console.log(response.jsonBody.businesses);
