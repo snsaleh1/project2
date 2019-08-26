@@ -17,7 +17,7 @@ function yelpSearch(req, res){
     }).then(response => {
       console.log(response);
         let result = response.jsonBody.businesses
-      res.render('homevents/locations', { eventLocation: result });
+      res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations" });
     //   res.status(200).json(result[0])
     }).catch(e => {
       console.log(e);

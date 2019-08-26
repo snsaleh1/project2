@@ -24,7 +24,7 @@ function index(req, res, next) {
 }
 
 function newHomevent(req, res) {
-    res.render('homevents/new', { title: 'Add Event!' });
+    res.render('homevents/new', { title: 'Add Location!' });
   }
 
 function addHomevent(req, res, next) {

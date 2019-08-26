@@ -1,8 +1,41 @@
+<%- include('../partials/header') %>
+
 <body>
 <h1>These is the mf locations!</h1>
+<img class="resPic" src="<%= eventLocation[0].image_url %>" alt="">
 <%= eventLocation[0].name %>
+
 <%= eventLocation[0].location.address1 %>
-<img src="<%= eventLocation[0].image_url %>" alt="">
-<%= eventLocation[0].is_closed %>
+
+<%= eventLocation[1].is_closed %>
+<br>
+<img class="resPic" src="<%= eventLocation[1].image_url %>" alt="">
+<%= eventLocation[1].name %>
+
+<%= eventLocation[1].location.address1 %>
+
+<%= eventLocation[1].is_closed %>
+<br>
+<img class="resPic" src="<%= eventLocation[2].image_url %>" alt="">
+<%= eventLocation[2].name %>
+
+<%= eventLocation[2].location.address1 %>
+
+<%= eventLocation[2].is_closed %>
+<br>
+<img class="resPic" src="<%= eventLocation[3].image_url %>" alt="">
+<%= eventLocation[3].name %>
+
+<%= eventLocation[3].location.address1 %>
+
+<%= eventLocation[3].is_closed %>
+<br>
+<img class="resPic" src="<%= eventLocation[4].image_url %>" alt="">
+<%= eventLocation[4].name %>
+
+<%= eventLocation[4].location.address1 %>
+
+<%= eventLocation[4].is_closed %>
+<br>
 </body>
 

@@ -40,3 +40,8 @@ a {
   display: grid;
   grid-gap: 10px;
 }
+
+.resPic {
+  height: 25%;
+  width: 25%;
+}
