@@ -1,5 +1,20 @@
-
-<form id="new-form" action="/homevents/new" method="POST">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Hom.e Add Event</title>
+</head>
+<body>
+<nav>
+        <img class="home" src="https://i.imgur.com/2idW9C3.jpg">
+        <br>
+        <a href="/homevents" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
+</nav>
+    <section class="addEvent">
+<form id="new-form" action="/yelpSearch" method="POST">
     <label>Who<br>(go back and refactor for performers):</label>
     <input type="text" name="who">
     <label>Event Type: </label>
@@ -22,4 +37,6 @@
     <input type="checkbox" name="nowShowing" checked>
     <input type="submit" value="Add Event">
   </form>
-
+</section>
+</body>
+</html>

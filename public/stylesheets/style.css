@@ -5,12 +5,15 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  font-size: 20px;
+  color: rgb(0, 136, 255);
+  font-weight: bold;
 }
 
 .home {
   height: 40px;
   width: 40px;
+  font-size: 20px;
 }
 
 .nav {
@@ -18,7 +21,22 @@ a {
   flex-direction: row-reverse;
   font-size: 20px;
   font-weight: bold;
+  grid-area: nav;  
+  color: #ebd5b3;
+  align-items: center;
+  padding: 0 30px 0 30px;
 }
 #list {
   width: 400px;
+}
+
+#new-form {
+  grid-column: span 2;
+  width: 10rem;
+  position: center;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  display: grid;
+  grid-gap: 10px;
 }

@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+// var searchCtrl = require('../controllers/yelp');
+
 // new code below
 const passport = require('passport');
 //
@@ -7,6 +9,10 @@ const passport = require('passport');
 router.get('/', function(req, res, next) {
   res.render('homevents/index',{ title: 'Mashed Potatoes', user: req.user });
 });
+
+// Yelp api router
+// router.post('/yelpSearch', searchCtrl.yelpSearch);
+
 
  // Google OAuth login route
  router.get('/auth/google', passport.authenticate(

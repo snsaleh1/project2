@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
 });
 router.get('/index', homeventsCtrl.index);
 router.get('/new', homeventsCtrl.new);
+router.post('/new', homeventsCtrl.create);
 // router.get('/:id', homeventsCtrl.show);
-// router.post('/', homeventsCtrl.create);
 
 
 
