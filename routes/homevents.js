@@ -9,7 +9,6 @@ router.get('/', function(req, res, next) {
 });
 router.get('/index', homeventsCtrl.index);
 router.get('/new', homeventsCtrl.new);
-// router.post('/yelpSearch', searchCtrl.yelpSearch);
 // router.get('/:id', homeventsCtrl.show);
 
 
