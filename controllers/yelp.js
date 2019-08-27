@@ -36,7 +36,7 @@ function yelpSearch(req, res){
       });
   } else if(req.body.what === "Activity"){
     client.search({
-        term: 'trampoline',
+        term: 'trampoline park',
         location: req.body.where,
         limit: 5
       }).then(response => {

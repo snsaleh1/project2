@@ -4,15 +4,14 @@ const Homevent = require('../models/homevent');
 module.exports = {
   index,
   addHomevent,
-  delEvent,
   new: newHomevent,
   create,
-  detail
+  show
 };
 
 function create (req, res){
     const event = newHomevent(req.body);
-    if(err) return res.redirect('/homevents/new', {title: 'Add Flight'});
+    if(err) return res.redirect('/homevents/', {title: 'Add Event!'});
     res.redirect(`homevents/${homevents._id}`);
 }
 
@@ -34,12 +33,10 @@ function addHomevent(req, res, next) {
     res.redirect('/homevents');
   });
 }
-function detail(req, res) {
+function show(req, res) {
     Homevent.findById(req.params.id, function(err, homevents) {
         res.render('homevents/show', { title: 'Homevent Detail', homevents });
       })
     };
 
-function delEvent(req, res, next) {
 
-}
