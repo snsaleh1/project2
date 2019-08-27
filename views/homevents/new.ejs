@@ -12,11 +12,12 @@
         <img class="home" src="https://i.imgur.com/2idW9C3.jpg">
         <br>
         <a href="/homevents" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
-</nav>
-    <section class="addEvent">
-<form id="new-form" action="/yelpSearch" method="POST">
-    <label>Who<br>(go back and refactor for performers):</label>
-    <input type="text" name="who">
+      </nav>
+      <section class="addEvent">
+        <form id="new-form" action="/yelpSearch" method="POST">
+          <label>Who<br>(go back and refactor for performers):</label>
+          <input type="text" name="who">
+          <label>I'm attending: </label> <input type="checkbox" name="nowShowing" checked>
     <label>Event Type: </label>
     <select name="what">
         <option value="Breakfast">Breakfast</option>
@@ -26,18 +27,17 @@
         <option value="Activity">Activity</option>
         <option value="Trip">Trip</option>
     </select>
+    <label>Event Date/Time</label>
+    <input type="datetime-local" name="when">
     <label>Event City</label>
     <select name="where">
       <option value="Irvine">Irvine</option>
       <option value="Fort Worth">Fort Worth</option>
       <option value="Los Angeles">Los Angeles</option>
       <option value="Austin">Austin</option>
+      <option value="Las Vegas">Las Vegas</option>
     </select>
     <input type="submit" value="Find Location">
-    <label>Event Date/Time</label>
-    <input type="datetime-local" name="when">
-    <label>I'm attending: </label>
-    <input type="checkbox" name="nowShowing" checked>
   </form>
 </section>
 </body>
