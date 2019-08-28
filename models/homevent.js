@@ -1,5 +1,13 @@
 const {Schema, model } = require('mongoose');
 
+const resultSchema = new Schema ({
+    name:  String,
+    image_url: String,
+    rating: Number,
+    address: String,
+    display_phone: String
+});
+
 const commentSchema = new Schema({
     content: String
 });
@@ -15,10 +23,10 @@ const homeventSchema = new Schema({
     when: {
         type: Date
     },
-    where: {
-        type: String
+    where: String,
 
-    },
+    result:[resultSchema],
+
     Why: {
         type: String
     },

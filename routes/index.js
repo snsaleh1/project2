@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
-// var searchCtrl = require('../controllers/yelp');
 
 // new code below
 const passport = require('passport');
 //
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('homevents/index',{ title: 'Mashed Potatoes', user: req.user });
+  res.render('homevents/index',{ title: 'HoM.e', user: req.user });
 });
 
 // Yelp api router

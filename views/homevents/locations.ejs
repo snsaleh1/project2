@@ -1,44 +1,246 @@
 <%- include('../partials/header') %>
 
 <body>
-<h1>These is the mf locations!</h1>
-<img class="resPic" src="<%= eventLocation[0].image_url %>" alt="">
+<h3>Where should we go?</h3>
+<section id="locList">
+    <div>
 <%= eventLocation[0].name %>
+<br>
+<img class="resPic" src="<%= eventLocation[0].image_url %>" alt="">
+<br>
 
 <%= eventLocation[0].location.address1 %>
-
-<%= eventLocation[1].is_closed %>
+<br>
+<%= eventLocation[0].display_phone %>
+<br>
+<%= eventLocation[0].rating %> <label>/5 Stars</label>
+<br>
+<form action="/homevents/yelpsearch" method="POST">
+    <input type="hidden" name="id" value="<%= homevent._id %>">
+    <input type="hidden" name="name" value="<%= eventLocation[0].name %>">
+    <input type="hidden" name="image_url" value="<%= eventLocation[0].image_url %>">
+    <input type="hidden" name="rating" value="<%= eventLocation[0].rating %>">
+    <input type="hidden" name="address" value="<%= eventLocation[0].location.address1 %>">
+    <input type="hidden" name="display_phone" value="<%= eventLocation[0].display_phone %>">
+    <input type="submit" value="Choose this location">
+</form>
+</div>
+<br>
+<br>
+<div>
+<%= eventLocation[1].name %>
 <br>
 <img class="resPic" src="<%= eventLocation[1].image_url %>" alt="">
-<%= eventLocation[1].name %>
-
+<br>
 <%= eventLocation[1].location.address1 %>
-
-<%= eventLocation[1].is_closed %>
+<br>
+<%= eventLocation[1].display_phone %>
+<br>
+<%= eventLocation[1].rating %> <label>/5 Stars</label>
+<br>
+<form action="/homevents/yelpsearch" method="POST">
+    <input type="hidden" name="id" value="<%= homevent._id %>">
+    <input type="hidden" name="name" value="<%= eventLocation[1].name %>">
+    <input type="hidden" name="image_url" value="<%= eventLocation[1].image_url %>">
+    <input type="hidden" name="rating" value="<%= eventLocation[1].rating %>">
+    <input type="hidden" name="address" value="<%= eventLocation[1].location.address1 %>">
+    <input type="hidden" name="display_phone" value="<%= eventLocation[1].display_phone %>">
+    <input type="submit" value="Choose this location">
+</form>
+</div>
+<br>
+<br>
+<div>
+<%= eventLocation[2].name %>
 <br>
 <img class="resPic" src="<%= eventLocation[2].image_url %>" alt="">
-<%= eventLocation[2].name %>
-
+<br>
 <%= eventLocation[2].location.address1 %>
-
-<%= eventLocation[2].is_closed %>
+<br>
+<%= eventLocation[2].display_phone %>
+<br>
+<%= eventLocation[2].rating %> <label>/5 Stars</label>
+<br>
+<form action="/homevents/yelpsearch" method="POST">
+    <input type="hidden" name="id" value="<%= homevent._id %>">
+    <input type="hidden" name="name" value="<%= eventLocation[2].name %>">
+    <input type="hidden" name="image_url" value="<%= eventLocation[2].image_url %>">
+    <input type="hidden" name="rating" value="<%= eventLocation[2].rating %>">
+    <input type="hidden" name="address" value="<%= eventLocation[2].location.address1 %>">
+    <input type="hidden" name="display_phone" value="<%= eventLocation[2].display_phone %>">
+    <input type="submit" value="Choose this location">
+</form>
+</div>
+<br>
+<br>
+<div>
+<%= eventLocation[3].name %>
 <br>
 <img class="resPic" src="<%= eventLocation[3].image_url %>" alt="">
-<%= eventLocation[3].name %>
-
+<br>
 <%= eventLocation[3].location.address1 %>
-
-<%= eventLocation[3].is_closed %>
+<br>
+<%= eventLocation[3].display_phone %>
+<br>
+<%= eventLocation[3].rating %> <label>/5 Stars</label>
+<br>
+<form action="/homevents/yelpsearch" method="POST">
+    <input type="hidden" name="id" value="<%= homevent._id %>">
+    <input type="hidden" name="name" value="<%= eventLocation[3].name %>">
+    <input type="hidden" name="image_url" value="<%= eventLocation[3].image_url %>">
+    <input type="hidden" name="rating" value="<%= eventLocation[3].rating %>">
+    <input type="hidden" name="address" value="<%= eventLocation[3].location.address1 %>">
+    <input type="hidden" name="display_phone" value="<%= eventLocation[3].display_phone %>">
+    <input type="submit" value="Choose this location">
+</form>
+</div>
+<br>
+<br>
+<div>
+<%= eventLocation[4].name %>
+<br>
 <br>
 <img class="resPic" src="<%= eventLocation[4].image_url %>" alt="">
-<%= eventLocation[4].name %>
-
-<%= eventLocation[4].location.address1 %>
-
-<%= eventLocation[4].is_closed %>
 <br>
+<%= eventLocation[4].location.address1 %>
+<br>
+<%= eventLocation[4].display_phone %>
+<br>
+<%= eventLocation[4].rating %> <label>/5 Stars</label>
+<br>
+<form action="/homevents/yelpsearch" method="POST">
+    <input type="hidden" name="id" value="<%= homevent._id %>">
+    <input type="hidden" name="name" value="<%= eventLocation[4].name %>">
+    <input type="hidden" name="image_url" value="<%= eventLocation[4].image_url %>">
+    <input type="hidden" name="rating" value="<%= eventLocation[4].rating %>">
+    <input type="hidden" name="address" value="<%= eventLocation[4].location.address1 %>">
+    <input type="hidden" name="display_phone" value="<%= eventLocation[4].display_phone %>">
+    <input type="submit" value="Choose this location">
+</form>
+<br>
+<br>
+</div>
+<br>
+<div>
+<%= eventLocation[5].name %>
+<br>
+<img class="resPic" src="<%= eventLocation[5].image_url %>" alt="">
+<br>
+        
+<%= eventLocation[5].location.address1 %>
+<br>
+<%= eventLocation[5].display_phone %>
+<br>
+<%= eventLocation[5].rating %> <label>/5 Stars</label>
+<br>
+<form action="/homevents/yelpsearch" method="POST">
+    <input type="hidden" name="id" value="<%= homevent._id %>">
+    <input type="hidden" name="name" value="<%= eventLocation[5].name %>">
+    <input type="hidden" name="image_url" value="<%= eventLocation[5].image_url %>">
+    <input type="hidden" name="rating" value="<%= eventLocation[5].rating %>">
+    <input type="hidden" name="address" value="<%= eventLocation[5].location.address1 %>">
+    <input type="hidden" name="display_phone" value="<%= eventLocation[5].display_phone %>">
+    <input type="submit" value="Choose this location">
+</form>
+</div>
+<br>
+<br>
+<div>
+        <%= eventLocation[6].name %>
+        <br>
+        <img class="resPic" src="<%= eventLocation[6].image_url %>" alt="">
+        <br>
+                
+<%= eventLocation[6].location.address1 %>
+<br>
+<%= eventLocation[6].display_phone %>
+<br>
+<%= eventLocation[6].rating %> <label>/5 Stars</label>
+<br>
+<form action="/homevents/yelpsearch" method="POST">
+    <input type="hidden" name="id" value="<%= homevent._id %>">
+    <input type="hidden" name="name" value="<%= eventLocation[6].name %>">
+    <input type="hidden" name="image_url" value="<%= eventLocation[6].image_url %>">
+    <input type="hidden" name="rating" value="<%= eventLocation[6].rating %>">
+    <input type="hidden" name="address" value="<%= eventLocation[6].location.address1 %>">
+    <input type="hidden" name="display_phone" value="<%= eventLocation[6].display_phone %>">
+    <input type="submit" value="Choose this location">
+</form>
+</div>
+<br>
+<br>
+<div>
+<%= eventLocation[7].name %>
+<br>
+<img class="resPic" src="<%= eventLocation[7].image_url %>" alt="">
+<br>       
+<%= eventLocation[7].location.address1 %>
+<br>
+<%= eventLocation[7].display_phone %>
+<br>
+<%= eventLocation[7].rating %> <label>/5 Stars</label>
+<br>
+<form action="/homevents/yelpsearch" method="POST">
+    <input type="hidden" name="id" value="<%= homevent._id %>">
+    <input type="hidden" name="name" value="<%= eventLocation[7].name %>">
+    <input type="hidden" name="image_url" value="<%= eventLocation[7].image_url %>">
+    <input type="hidden" name="rating" value="<%= eventLocation[7].rating %>">
+    <input type="hidden" name="address" value="<%= eventLocation[7].location.address1 %>">
+    <input type="hidden" name="display_phone" value="<%= eventLocation[7].display_phone %>">
+    <input type="submit" value="Choose this location">
+</form>
+</div>
 
-<input type="submit" value="Add Event!" >
+<br>
+<div>
+        <%= eventLocation[8].name %>
+        <br>
+<img class="resPic" src="<%= eventLocation[8].image_url %>" alt="">
+<br>
+                                
+<%= eventLocation[8].location.address1 %>
+<br>
+<%= eventLocation[8].display_phone %>
+<br>
+<%= eventLocation[8].rating %> <label>/5 Stars</label>
+<br>
+<form action="/homevents/yelpsearch" method="POST">
+    <input type="hidden" name="id" value="<%= homevent._id %>">
+    <input type="hidden" name="name" value="<%= eventLocation[8].name %>">
+    <input type="hidden" name="image_url" value="<%= eventLocation[8].image_url %>">
+    <input type="hidden" name="rating" value="<%= eventLocation[8].rating %>">
+    <input type="hidden" name="address" value="<%= eventLocation[8].location.address1 %>">
+    <input type="hidden" name="display_phone" value="<%= eventLocation[8].display_phone %>">
+    <input type="submit" value="Choose this location">
+</form>
+</div>
+<br>
+<br><div>
+    <%= eventLocation[9].name %>
+    <br>
+    <img class="resPic" src="<%= eventLocation[9].image_url %>" alt="">
+    <br>
+                                        
+    <%= eventLocation[9].location.address1 %>
+    <br>
+    <%= eventLocation[9].display_phone %>
+    <br>/homevents/yelpsearch
+    <%= eventLocation[9].rating %> <label>/5 Stars</label>
+    <br>
+    <form action="/homevents/yelpsearch" method="POST">
+        <input type="hidden" name="id" value="<%= homevent._id %>">
+        <input type="hidden" name="name" value="<%= eventLocation[9].name %>">
+        <input type="hidden" name="image_url" value="<%= eventLocation[9].image_url %>">
+        <input type="hidden" name="rating" value="<%= eventLocation[9].rating %>">
+        <input type="hidden" name="address" value="<%= eventLocation[9].location.address1 %>">
+        <input type="hidden" name="display_phone" value="<%= eventLocation[9].display_phone %>">
+        <input type="submit" value="Choose this location">
+</form>
+</div>
+<br>
+<br>
+</section>
+<input id="addEvBut" type="submit" value="Add To Event!" name="Add To Event!">
 
 </body>
 

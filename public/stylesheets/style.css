@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-family: 'Georgia, serif';
   background-color: #ebd5b3;
 }
 
@@ -27,7 +28,7 @@ a {
   padding: 0 30px 0 30px;
 }
 #list {
-  width: 400px;
+  width: 650px;
 }
 
 #new-form {
@@ -50,3 +51,40 @@ input {
   height: 40px;
   width: 200px;
 }
+
+#user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: MAROON;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.homeventsList {
+  display: flex;
+  justify-content: center
+}
+
+.circlePic {
+  content: ' \25CF';
+  font-size: 80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.homBut{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.addEvBut {
+  
+}
+
+/* #locList {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-template-rows: repeat(4, 4fr);
+} */

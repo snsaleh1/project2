@@ -1,18 +1,39 @@
 <%- include('../partials/header') %>
 <body>
     <% if (user) { %>
-
+  <section id="user-profile">
+    <div>
+      <p><%= user.name %></p>
+      <p><%= user.email %></p>
+      <img class="circlePic" src="images/profPic.jpg" alt="">
+      <p><%= user.interests %></p>
+      <p><%= user.ambitions %></p>
+  </div>
+</section>
+<br>
+<br>
   <section class=homeventsList>
     <table id="list">
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Location</th>
+            <th>Event<br>Date</th>
+            <th>Event<br>Location</th>
             <th>Event<br>Type</th>
-            <th></th>
+            <th>Event<br>Organizer</th>
           </tr>
         </thead>
       <br>
+      <tbody>
+          <% homevents.forEach(function(h, id) { %>
+            <tr>
+              <td><%= h.when %></td>
+              <td><%= h.result %></td>
+              <td><%= h.what %></td>
+              <td><a href="/homevents/<%= h._id %>">DETAILS</a></td>
+              <td><%= user.name %></td>
+            </tr>
+            <% }); %>
+          </tbody>
         </table>
   </section>      
   <% } else { %>
