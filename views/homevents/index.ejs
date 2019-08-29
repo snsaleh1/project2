@@ -2,12 +2,11 @@
 <body>
     <% if (user) { %>
   <section id="user-profile">
-    <div>
-      <p><%= user.name %></p>
+    <div id="userProfile">
+      <p id="uName"><%= user.name %></p>
       <p><%= user.email %></p>
-      <img class="circlePic" src="images/profPic.jpg" alt="">
-      <p><%= user.interests %></p>
-      <p><%= user.ambitions %></p>
+      <p> Interests: Food, Rugby, THE Ohio State Buckeyes, Writing, & The Beach</p>
+      <p> Ambitions: Coding, Piano, French, Boxing, Getting my damn books published</p>
   </div>
 </section>
 <br>
@@ -20,20 +19,20 @@
             <th>Event<br>Location</th>
             <th>Event<br>Type</th>
             <th>Event<br>Organizer</th>
+            <th></th>
           </tr>
         </thead>
-      <br>
-      <tbody>
-          <% homevents.forEach(function(h, id) { %>
-            <tr>
-              <td><%= h.when %></td>
-              <td><%= h.result %></td>
-              <td><%= h.what %></td>
-              <td><a href="/homevents/<%= h._id %>">DETAILS</a></td>
-              <td><%= user.name %></td>
-            </tr>
-            <% }); %>
-          </tbody>
+        <tbody>
+            <% homevents.forEach(function(h) { %>
+              <tr>
+                <td><%= h.when %></td>
+                <td><%= h.what %></td>
+                <td><%= h.where %></td>
+                <td><%= user.name %></td>
+                <td><a href="/homevents/<%= h._id %>">DETAILS</a></td>
+              </tr>
+              <% }); %>
+            </tbody>
         </table>
   </section>      
   <% } else { %>

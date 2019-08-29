@@ -62,8 +62,12 @@ input {
 }
 
 .homeventsList {
-  display: flex;
-  justify-content: center
+  /* display: flex;
+  justify-content: space-evenly; */
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px;
 }
 
 .circlePic {
@@ -79,12 +83,14 @@ input {
   flex-direction: column-reverse;
 }
 
-.addEvBut {
-  
+#userProfile {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-family: "Papyrus";
 }
 
-/* #locList {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  grid-template-rows: repeat(4, 4fr);
-} */
+#uName {
+font-size: 36px;
+
+}

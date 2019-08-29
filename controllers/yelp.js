@@ -57,9 +57,10 @@ function yelpSearch(req, res){
 function create (req, res) {
   console.log(req.body);
   Homevent.findById(req.body.id, function(err, newEvent){
-    console.log(newEvent);
+    console.log(newEvent.result);
     newEvent.result.push(req.body);
     newEvent.save(function (err, savedEvent){
+      console.log(savedEvent);
       res.redirect('/homevents');
     })
   })

@@ -15,7 +15,7 @@
       </nav>
       <section class="addEvent">
         <form id="new-form" action="/yelpSearch" method="POST">
-          <label>Who<br>(go back and refactor for performers):</label>
+          <label>Who's Invited<br>:</label>
           <input type="text" name="who">
           <label>I'm attending: </label> <input type="checkbox" name="nowShowing" checked>
     <label>Event Type: </label>
@@ -29,14 +29,8 @@
     </select>
     <label>Event Date/Time</label>
     <input type="datetime-local" name="when">
-    <label>Event City</label>
-    <select name="where">
-      <option value="Irvine">Irvine</option>
-      <option value="Fort Worth">Fort Worth</option>
-      <option value="Los Angeles">Los Angeles</option>
-      <option value="Austin">Austin</option>
-      <option value="Las Vegas">Las Vegas</option>
-    </select>
+    <label>Event City/State</label>
+    <input type="text" name="where">
     <input type="submit" value="Find Location" name="Find Location">
   </form>
 </section>
