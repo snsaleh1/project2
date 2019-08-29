@@ -62,12 +62,7 @@ input {
 }
 
 .homeventsList {
-  /* display: flex;
-  justify-content: space-evenly; */
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 15px;
+  text-align: center;
 }
 
 .circlePic {
@@ -92,4 +87,13 @@ input {
 
 #uName {
 font-size: 36px;
+}
+
+.delBut {
+  display:grid;
+  float: right;
+}
+
+thead {
+  font-size: 36px;
 }

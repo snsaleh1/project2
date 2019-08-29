@@ -1,11 +1,13 @@
 const User = require('../models/user');
 const Homevent = require('../models/homevent');
 
+
 module.exports = {
   index,
   new: newHomevent,
   create,
-  delete: deleteEvent
+  delete: deleteEvent,
+  show
 };
 
 function create (req, res){
@@ -29,19 +31,19 @@ function newHomevent(req, res) {
     res.render('homevents/new', { title: 'Add Location!' });
 }
 
-// function show(req, res) {
-//     Homevent.findById(req.params.id, function(err, Homevent) {
-//         res.render('homevents/show', { title: 'Homevent Detail', Homevent });
-//       })
-//     };
+function show(req, res) {
+    Homevent.findById(req.params.id, function(err, detail) {
+        res.render('homevents/show', { title: 'Homevent Detail', detail });
+      })
+    };
 
 function deleteEvent(req,res) {
-  Homevent.findByIdAndRemove(req.params.id, function(err, deletedEvent) {
+  console.log(req.params.id)
+  Homevent.findByIdAndRemove(req.params.id, function(err) {
     if (err) {
       console.error(err)
       res.send(err)
     }
-    console.log(req.params.id, deletedEvent);
     res.redirect("/homevents");
   })
-}
+};

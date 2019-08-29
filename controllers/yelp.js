@@ -13,7 +13,7 @@ function yelpSearch(req, res){
   console.log(req.body.what);
   const homevent = new Homevent(req.body);
   homevent.save();
-    if(req.body.what === "Breakfast" || req.body.what === "Lunch" || req.body.what === "Dinner"){
+    if(req.body.what === "Breakfast"){
     client.search({
       term: 'Breakfast',
       location: req.body.where,
@@ -27,31 +27,63 @@ function yelpSearch(req, res){
     }).catch(e => {
       console.log(e);
     });
+  } else if(req.body.what === "Lunch" || req.body.what === "Dinner"){
+    client.search({
+      term: 'Restaurant',
+      location: req.body.where,
+      limit: 10
+    }).then(response => {
+      console.log(response);
+        // Result.push(req.body.result);
+        let result = response.jsonBody.businesses
+      res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
+    //   res.status(200).json(result[0])
+    }).catch(e => {
+      console.log(e);
+    });
   } else if(req.body.what === "Coffee/Drinks"){
     client.search({
-        term: 'coffee shop',
-        location: req.body.where,
-        limit: 10
-      }).then(response => {
-        console.log(response.jsonBody.businesses);
+      term: 'Coffee Shop',
+      location: req.body.where,
+      limit: 10
+    }).then(response => {
+      console.log(response);
+        // Result.push(req.body.result);
         let result = response.jsonBody.businesses
-        res.status(200).json(result)
-      }).catch(e => {
-        console.log(e);
-      });
+      res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
+    //   res.status(200).json(result[0])
+    }).catch(e => {
+      console.log(e);
+    });
   } else if(req.body.what === "Activity"){
     client.search({
-        term: 'trampoline park',
-        location: req.body.where,
-        limit: 5
-      }).then(response => {
-        console.log(response.jsonBody.businesses);
+      term: 'trampoline park',
+      location: req.body.where,
+      limit: 10
+    }).then(response => {
+      console.log(response);
+        // Result.push(req.body.result);
         let result = response.jsonBody.businesses
-        res.status(200).json(result)
-      }).catch(e => {
-        console.log(e);
-      });
-  }
+      res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
+    //   res.status(200).json(result[0])
+    }).catch(e => {
+      console.log(e);
+    });
+  } else if(req.body.what === "trip"){
+    client.search({
+      term: 'Hotels',
+      location: req.body.where,
+      limit: 10
+    }).then(response => {
+      console.log(response);
+        // Result.push(req.body.result);
+        let result = response.jsonBody.businesses
+      res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
+    //   res.status(200).json(result[0])
+    }).catch(e => {
+      console.log(e);
+    });
+}
 };
 
 function create (req, res) {

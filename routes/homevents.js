@@ -11,6 +11,7 @@ router.get('/index', homeventsCtrl.index);
 router.get('/new', homeventsCtrl.new);
 router.post('/locations', homeventsCtrl.create);
 router.post('/yelpsearch', searchCtrl.create);
-router.delete('/', homeventsCtrl.delete);
+router.delete('/:id', homeventsCtrl.delete);
+router.get('/index', homeventsCtrl.show);
 
 module.exports = router;

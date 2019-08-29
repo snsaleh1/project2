@@ -15,31 +15,30 @@
     <table id="list">
         <thead>
           <tr>
-            <th>             </th>
             <th>Event<br>Date</th>
             <th>Event<br>Location</th>
             <th>Event<br>Type</th>
             <th>Event<br>Organizer</th>
-            <th>             </th>
           </tr>
         </thead>
         <tbody>
-            <% homevents.forEach(function(h) { %>
+            <hr/>
+          <% homevents.forEach(function(h) { %>
+            <form id="delBut" action="/homevents/<%= h._id %>?_method=DELETE" method="POST">
+              <button type="submit">DELETE</button>
+            </form>
               <tr>
                 <td><%= h.when %></td>
-                <td><%= h.what %></td>
                 <% h.result.forEach(function(id){ %>
-                  <td><%= id.name %></td>
+                  <td>"<%= id.name %>"
+                    <br>
+                  <%= id.address %>
                   <br>
-                  <td><%= id.address %></td>
-                  <br>
-                  <td><%= id.display_phone %></td>
+                  <%= id.display_phone %></td>
                   <% }) %>
+                  <td><%= h.what %></td>
                   <td><%= user.name %></td>
-                  <form action="/homevents/<%= h._id %>?_method=DELETE" method="POST">
-                    <button type="submit">DELETE</button>
-                  </form>
-                <td><a href="/homevents/<%= h._id %>">DETAILS</a></td>
+                <td><a href="/homevents/<%= homevents._id %>">DETAILS</a></td>
               </tr>
               <% }); %>
             </tbody>
