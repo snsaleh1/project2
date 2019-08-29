@@ -5,7 +5,7 @@ module.exports = {
   index,
   new: newHomevent,
   create,
-  show
+  delete: deleteEvent
 };
 
 function create (req, res){
@@ -27,12 +27,21 @@ function index(req, res) {
 
 function newHomevent(req, res) {
     res.render('homevents/new', { title: 'Add Location!' });
-  }
+}
 
-function show(req, res) {
-    Homevent.findById(req.params.id, function(err, Homevent) {
-        res.render('homevents/show', { title: 'Homevent Detail', Homevent });
-      })
-    };
+// function show(req, res) {
+//     Homevent.findById(req.params.id, function(err, Homevent) {
+//         res.render('homevents/show', { title: 'Homevent Detail', Homevent });
+//       })
+//     };
 
-
+function deleteEvent(req,res) {
+  Homevent.findByIdAndRemove(req.params.id, function(err, deletedEvent) {
+    if (err) {
+      console.error(err)
+      res.send(err)
+    }
+    console.log(req.params.id, deletedEvent);
+    res.redirect("/homevents");
+  })
+}

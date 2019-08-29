@@ -15,11 +15,12 @@
     <table id="list">
         <thead>
           <tr>
+            <th>             </th>
             <th>Event<br>Date</th>
             <th>Event<br>Location</th>
             <th>Event<br>Type</th>
             <th>Event<br>Organizer</th>
-            <th></th>
+            <th>             </th>
           </tr>
         </thead>
         <tbody>
@@ -27,14 +28,23 @@
               <tr>
                 <td><%= h.when %></td>
                 <td><%= h.what %></td>
-                <td><%= h.where %></td>
-                <td><%= user.name %></td>
+                <% h.result.forEach(function(id){ %>
+                  <td><%= id.name %></td>
+                  <br>
+                  <td><%= id.address %></td>
+                  <br>
+                  <td><%= id.display_phone %></td>
+                  <% }) %>
+                  <td><%= user.name %></td>
+                  <form action="/homevents/<%= h._id %>?_method=DELETE" method="POST">
+                    <button type="submit">DELETE</button>
+                  </form>
                 <td><a href="/homevents/<%= h._id %>">DETAILS</a></td>
               </tr>
               <% }); %>
             </tbody>
         </table>
-  </section>      
+  </section>
   <% } else { %>
   <section>
     <h2>House of Medici enterprises welcomes you to YOUR FAMILY EVENTS</h2>

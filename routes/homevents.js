@@ -10,8 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/index', homeventsCtrl.index);
 router.get('/new', homeventsCtrl.new);
 router.post('/locations', homeventsCtrl.create);
-router.get('/:id', homeventsCtrl.show)
 router.post('/yelpsearch', searchCtrl.create);
-
+router.delete('/', homeventsCtrl.delete);
 
 module.exports = router;

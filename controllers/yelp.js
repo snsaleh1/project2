@@ -5,7 +5,7 @@ const client = yelp.client(process.env.YELP_API);
 module.exports = {
     yelpSearch,
     create,
-    index
+    index,
 }
 
 function yelpSearch(req, res){
@@ -15,7 +15,7 @@ function yelpSearch(req, res){
   homevent.save();
     if(req.body.what === "Breakfast" || req.body.what === "Lunch" || req.body.what === "Dinner"){
     client.search({
-      term: 'Restaurant',
+      term: 'Breakfast',
       location: req.body.where,
       limit: 10
     }).then(response => {
@@ -71,3 +71,4 @@ function index(req, res) {
       res.render('homevents/index', { title: 'All Events', Homevent});
   });
 }
+
