@@ -57,7 +57,7 @@ function yelpSearch(req, res){
     });
   } else if(req.body.what === "Activity"){
     client.search({
-      term: 'trampoline park',
+      term: 'Trampoline',
       location: req.body.where,
       limit: 10
     }).then(response => {
@@ -71,7 +71,7 @@ function yelpSearch(req, res){
     });
   } else if(req.body.what === "trip"){
     client.search({
-      term: 'Hotels',
+      term: 'Hotel',
       location: req.body.where,
       limit: 10
     }).then(response => {
