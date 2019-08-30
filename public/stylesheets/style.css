@@ -3,6 +3,7 @@ body {
   font-size: 24px;
   font-family: 'Georgia, serif';
   background-color: #ebd5b3;
+  
 }
 
 a {
@@ -54,15 +55,15 @@ input {
 
 #user-profile {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background-color: MAROON;
-  height: 250px;
+  height: 300px;
   border-radius: 5px;
 }
 
 .homeventsList {
-  text-align: center;
+  text-align: center;  
 }
 
 .circlePic {
@@ -87,11 +88,6 @@ input {
 
 #uName {
 font-size: 36px;
-}
-
-.delBut {
-  display:grid;
-  float: right;
 }
 
 thead {

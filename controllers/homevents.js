@@ -33,7 +33,7 @@ function newHomevent(req, res) {
 
 function show(req, res) {
     Homevent.findById(req.params.id, function(err, detail) {
-        res.render('homevents/show', { title: 'Homevent Detail', detail });
+        res.render('homevents/show', { title: 'Homevent Detail', detail, user: req.user });
       })
     };
 
