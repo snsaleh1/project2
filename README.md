@@ -2,7 +2,7 @@
 ## HoM.e presents...
 ## **Your Family Events**
 
-Try it now by clicking [here](link on the way)
+Try it now by clicking [here](https://homevents.herokuapp.com)
 
 ### Motivation:
 #### The time we spend away from our families can be paramount for individual evolution or finding out who we really are. During that time it can be difficult to maintain contact with those who we've known our whole lives especially when every popular app out there is about making new connections with strangers. 
