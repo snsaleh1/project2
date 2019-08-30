@@ -30,7 +30,9 @@
               <tr>
                 <td><%= h.when %></td>
                 <% h.result.forEach(function(id){ %>
-                  <td>"<%= id.name %>"
+                  <td> <img id="indexPic" src="<%= id.image_url %>">
+                    <br>
+                    "<%= id.name %>"
                     <br>
                   <%= id.address %>
                   <br>
