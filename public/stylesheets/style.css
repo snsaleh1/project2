@@ -44,8 +44,8 @@ a {
 }
 
 .resPic {
-  height: 15%;
-  width: 15%;
+  height: 25%;
+  width: 25%;
 }
 
 input {
@@ -58,7 +58,7 @@ input {
   align-items: flex-start;
   justify-content: center;
   background-color: MAROON;
-  height: 300px;
+  height: 75%px;
   border-radius: 5px;
 }
 
@@ -95,8 +95,8 @@ thead {
 }
 
 #indexPic {
-  height: 15%;
-  width: 25%;
+  height: 20%;
+  width: 30%;
 }
 
 #profPic {
@@ -106,4 +106,12 @@ thead {
   height: 300px;
   border-radius: 50%;
 
+}
+#delBut {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.checkbox {
+  display: flex;
 }

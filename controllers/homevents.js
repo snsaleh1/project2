@@ -44,6 +44,6 @@ function deleteEvent(req,res) {
       console.error(err)
       res.send(err)
     }
-    res.redirect("/homevents");
+    // res.redirect("/homevents");
   })
 };

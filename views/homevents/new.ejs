@@ -17,13 +17,15 @@
         <form id="new-form" action="/yelpSearch" method="POST">
           <label>Who's Invited:</label>
           <input type="text" name="who">
-          <label>I'm attending: </label> <input type="checkbox" name="nowShowing" checked>
+          <div class="checkbox"><label>I'm attending: </label><input type="checkbox" name="nowShowing" checked>
+            </div> 
     <label>Event Type: </label>
     <select name="what">
         <option value="Breakfast">Breakfast</option>
         <option value="Lunch">Lunch</option>
         <option value="Dinner">Dinner</option>
-        <option value="Coffee/Drinks">Coffee/Drinks</option>
+        <option value="Coffee">Coffee</option>
+        <option value="Drinks">Drinks</option>
         <option value="Activity">Activity</option>
         <option value="Trip">Trip</option>
     </select>

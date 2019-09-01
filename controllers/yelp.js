@@ -9,8 +9,6 @@ module.exports = {
 }
 
 function yelpSearch(req, res){
-  console.log(req.body.where);
-  console.log(req.body.what);
   const homevent = new Homevent(req.body);
   homevent.save();
     if(req.body.what === "Breakfast"){
@@ -19,11 +17,8 @@ function yelpSearch(req, res){
       location: req.body.where,
       limit: 10
     }).then(response => {
-      console.log(response);
-        // Result.push(req.body.result);
         let result = response.jsonBody.businesses
       res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
-    //   res.status(200).json(result[0])
     }).catch(e => {
       console.log(e);
     });
@@ -33,25 +28,30 @@ function yelpSearch(req, res){
       location: req.body.where,
       limit: 10
     }).then(response => {
-      console.log(response);
-        // Result.push(req.body.result);
         let result = response.jsonBody.businesses
       res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
-    //   res.status(200).json(result[0])
     }).catch(e => {
       console.log(e);
     });
-  } else if(req.body.what === "Coffee/Drinks"){
+  } else if(req.body.what === "Coffee"){
     client.search({
       term: 'Coffee Shop',
       location: req.body.where,
       limit: 10
     }).then(response => {
-      console.log(response);
-        // Result.push(req.body.result);
         let result = response.jsonBody.businesses
       res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
-    //   res.status(200).json(result[0])
+    }).catch(e => {
+      console.log(e);
+    });
+  } else if(req.body.what === "Drinks"){
+    client.search({
+      term: 'Bar Lounge',
+      location: req.body.where,
+      limit: 10
+    }).then(response => {
+        let result = response.jsonBody.businesses
+      res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
     }).catch(e => {
       console.log(e);
     });
@@ -61,25 +61,20 @@ function yelpSearch(req, res){
       location: req.body.where,
       limit: 10
     }).then(response => {
-      console.log(response);
-        // Result.push(req.body.result);
         let result = response.jsonBody.businesses
       res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
-    //   res.status(200).json(result[0])
     }).catch(e => {
       console.log(e);
     });
-  } else if(req.body.what === "trip"){
+  } else if(req.body.what === "Trip"){
     client.search({
       term: 'Hotel',
       location: req.body.where,
       limit: 10
     }).then(response => {
       console.log(response);
-        // Result.push(req.body.result);
         let result = response.jsonBody.businesses
       res.render('homevents/locations', { eventLocation: result, user: req.user, title: "Event Locations",  homevent});
-    //   res.status(200).json(result[0])
     }).catch(e => {
       console.log(e);
     });
@@ -103,4 +98,3 @@ function index(req, res) {
       res.render('homevents/index', { title: 'All Events', Homevent});
   });
 }
-
