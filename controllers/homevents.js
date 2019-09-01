@@ -7,7 +7,7 @@ module.exports = {
   new: newHomevent,
   create,
   delete: deleteEvent,
-  show
+  show,
 };
 
 function create (req, res){

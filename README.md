@@ -18,7 +18,7 @@ Try it now by clicking [here](https://homevents.herokuapp.com)
 ### WireFrames:
 [wireframe](https://i.imgur.com/I7rUeBX.jpg)
 
-https://wireframe.cc/B9D18A
+[Original-wireframe](https://wireframe.cc/B9D18A)
 
 ### Technology Used:
 - HTML
@@ -35,7 +35,6 @@ https://wireframe.cc/B9D18A
 - AAU I want to be able to log into my profile
 - AAU I want to be able to see all of my family's events and who created each event
 - AAU I want to be able to create an event myself
-- AAU I want to be able to choose a specific location and present it as the "Where" for the event
 - AAU I want to be able to delete an event because I am the king/queen of the family
 - AAU I want to be able to navigate to a page that shows all of the event details.
 
